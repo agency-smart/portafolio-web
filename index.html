@@ -114,6 +114,49 @@ body{font-family:'Inter',sans-serif;background:#fff;color:#111;-webkit-print-col
   a{color:inherit!important}
   .card-link{color:var(--red)!important}
 }
+
+  /* ── MOBILE ─────────────────────────────────────────── */
+  @media (max-width: 768px){
+    .cover{padding:40px 24px;min-height:100svh}
+    .cover h1{font-size:42px}
+    .cover-sub{font-size:15px}
+    .cover-pills{gap:8px}
+    .pill{font-size:11px;padding:6px 14px}
+    .cover-footer{flex-direction:column;gap:10px;text-align:center}
+
+    .page{padding:40px 24px}
+    .section-title{font-size:26px}
+    .section-desc{font-size:14px}
+
+    .stats-grid{grid-template-columns:1fr 1fr}
+    .stat{padding:20px 12px}
+    .stat-num{font-size:26px}
+
+    .sector-bar{padding:14px 16px}
+    .sector-name{font-size:15px}
+
+    .grid-2{grid-template-columns:1fr}
+    .grid-1{grid-template-columns:1fr}
+
+    .card-thumb{height:160px}
+    .card-title-thumb{font-size:12px}
+    .card-name{font-size:14px}
+    .card-desc{font-size:12px}
+
+    .services-grid{grid-template-columns:1fr 1fr}
+
+    .cta{flex-direction:column;padding:36px 24px;gap:28px}
+    .cta h2{font-size:24px}
+    .cta-contacts{min-width:unset;width:100%}
+
+    .footer{flex-direction:column;gap:8px;padding:24px;text-align:center}
+  }
+
+  @media (max-width: 400px){
+    .cover h1{font-size:36px}
+    .stats-grid{grid-template-columns:1fr 1fr}
+    .services-grid{grid-template-columns:1fr}
+  }
 </style>
 </head>
 <body>
