@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agency Smart — Portafolio Web 2025</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --red:#CC0000;--black:#111;--gray:#666;--gray-lt:#f4f4f4;
+  --white:#fff;--border:#e5e5e5;--blue:#1a5e9e;--green:#1a7a45;
+  --orange:#c0600a;--brown:#8b4513;
+}
+body{font-family:'Inter',sans-serif;background:#fff;color:#111;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+
+/* COVER */
+.cover{min-height:100vh;display:flex;flex-direction:column;justify-content:center;background:#111;color:#fff;padding:80px;position:relative;overflow:hidden;page-break-after:always}
+.cover::before{content:'';position:absolute;top:0;left:0;width:6px;height:100%;background:var(--red)}
+.cover-logo{display:flex;align-items:center;gap:16px;margin-bottom:80px}
+.cover-badge{width:52px;height:52px;background:var(--red);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:900;color:#fff}
+.cover h1{font-size:72px;font-weight:900;line-height:1;margin-bottom:10px}
+.cover h1 span{color:var(--red)}
+.cover-sub{font-size:18px;color:#aaa;max-width:500px;line-height:1.6;margin-bottom:60px}
+.cover-pills{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:80px}
+.pill{padding:7px 18px;border-radius:40px;font-size:13px;font-weight:600;border:1px solid}
+.pill-red{border-color:var(--red);color:var(--red)}
+.pill-blue{border-color:#5b9cd6;color:#5b9cd6}
+.pill-green{border-color:#4fc38a;color:#4fc38a}
+.pill-orange{border-color:#e8904a;color:#e8904a}
+.pill-brown{border-color:#c8955a;color:#c8955a}
+.cover-footer{display:flex;justify-content:space-between;align-items:center;border-top:1px solid #2a2a2a;padding-top:24px;font-size:13px;color:#aaa}
+.cover-footer a{color:#aaa;text-decoration:none}
+
+/* PAGES */
+.page{padding:60px 80px;max-width:1100px;margin:0 auto}
+.page-break{page-break-before:always}
+
+/* SECTION HEADER */
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--red);margin-bottom:14px}
+.eyebrow::before{content:'';width:20px;height:2px;background:var(--red)}
+.section-title{font-size:36px;font-weight:800;color:#111;line-height:1.15;margin-bottom:10px}
+.section-desc{font-size:15px;color:#666;line-height:1.7;max-width:620px;margin-bottom:40px}
+
+/* STATS */
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:0}
+.stat{background:#fff;padding:28px 16px;text-align:center}
+.stat-num{font-size:34px;font-weight:900;color:var(--red);line-height:1}
+.stat-label{font-size:12px;color:#888;margin-top:6px;line-height:1.4}
+
+/* SECTOR BAR */
+.sector-bar{display:flex;align-items:center;gap:14px;padding:16px 22px;border-radius:10px;margin-bottom:30px}
+.sector-icon{width:42px;height:42px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.sector-label{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;opacity:.7}
+.sector-name{font-size:18px;font-weight:800;line-height:1.2}
+.sector-salud{background:#fff0f0;color:var(--red)}.sector-salud .sector-icon{background:var(--red);color:#fff}
+.sector-re{background:#e8f1fb;color:var(--blue)}.sector-re .sector-icon{background:var(--blue);color:#fff}
+.sector-ecom{background:#fff4ec;color:var(--orange)}.sector-ecom .sector-icon{background:var(--orange);color:#fff}
+.sector-rodeo{background:#1a0a00;color:#c97d2a}.sector-rodeo .sector-icon{background:#c97d2a;color:#fff}
+.sector-resto{background:#eef7ee;color:var(--green)}.sector-resto .sector-icon{background:var(--green);color:#fff}
+
+/* GRID */
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:48px}
+.grid-1{display:grid;grid-template-columns:minmax(0,520px);gap:24px;margin-bottom:48px}
+
+/* CARD */
+.card{border:1px solid var(--border);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.card-thumb{height:190px;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:20px}
+.card-thumb .emoji{font-size:38px}
+.card-title-thumb{font-weight:900;font-size:13px;letter-spacing:.8px;text-align:center}
+.card-sub-thumb{font-size:11px;opacity:.7;text-align:center;line-height:1.4}
+.card-badges{display:flex;gap:6px;margin-top:4px;flex-wrap:wrap;justify-content:center}
+.badge{padding:3px 12px;border-radius:20px;font-size:10px;font-weight:800}
+.badge-dark{background:rgba(0,0,0,.55);color:#fff}
+.badge-light{background:rgba(255,255,255,.2);color:#fff}
+.badge-white{background:rgba(255,255,255,.9);color:#111}
+.card-badge-tl{position:absolute;top:10px;left:10px;padding:4px 10px;border-radius:20px;font-size:10px;font-weight:700}
+.card-badge-tr{position:absolute;top:10px;right:10px;padding:4px 10px;border-radius:20px;font-size:10px;font-weight:700;background:#f59e0b;color:#fff}
+.card-body{padding:20px;flex:1;display:flex;flex-direction:column}
+.card-name{font-size:15px;font-weight:700;color:#111;margin-bottom:6px}
+.card-desc{font-size:13px;color:#666;line-height:1.6;margin-bottom:14px;flex:1}
+.card-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.tag{padding:3px 10px;background:var(--gray-lt);border-radius:20px;font-size:11px;color:#555;font-weight:500}
+.card-footer{display:flex;align-items:center;justify-content:flex-end;padding-top:12px;border-top:1px solid var(--border)}
+.card-link{font-size:12px;font-weight:700;color:var(--red);text-decoration:none}
+.card-link:hover{text-decoration:underline}
+
+/* SERVICES */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}
+.service-card{border:1px solid var(--border);border-radius:12px;padding:22px}
+.service-icon{width:38px;height:38px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:12px}
+.service-title{font-size:14px;font-weight:700;color:#111;margin-bottom:6px}
+.service-desc{font-size:12px;color:#888;line-height:1.6}
+.platforms{display:flex;flex-wrap:wrap;gap:4px;margin-top:10px}
+.platform{padding:2px 8px;background:var(--gray-lt);border-radius:4px;font-size:10px;font-weight:600;color:#555}
+
+/* CTA */
+.cta{background:#111;color:#fff;border-radius:20px;padding:56px;margin:56px 0;display:flex;align-items:center;justify-content:space-between;gap:40px}
+.cta h2{font-size:30px;font-weight:900;margin-bottom:8px}
+.cta h2 span{color:var(--red)}
+.cta p{color:#aaa;font-size:14px;line-height:1.6}
+.cta-contacts{display:flex;flex-direction:column;gap:12px;min-width:250px}
+.cta-row{display:flex;align-items:center;gap:10px}
+.cta-dot{width:7px;height:7px;border-radius:50%;background:var(--red);flex-shrink:0}
+.cta-info span{color:#aaa;display:block;font-size:11px}
+.cta-info a{color:#fff;text-decoration:none;font-size:13px;font-weight:500}
+
+/* FOOTER */
+.footer{border-top:1px solid var(--border);padding:28px 80px;display:flex;justify-content:space-between;font-size:12px;color:#888}
+.footer strong{color:var(--red)}
+
+@media print{
+  .cover,.page{page-break-inside:avoid}
+  a{color:inherit!important}
+  .card-link{color:var(--red)!important}
+}
+</style>
+</head>
+<body>
+
+<!-- PORTADA -->
+<div class="cover">
+  <div class="cover-logo">
+    <div class="cover-badge">AS</div>
+    <div>
+      <div style="font-size:18px;font-weight:800">Agency Smart</div>
+      <div style="font-size:12px;color:#aaa;letter-spacing:2px;text-transform:uppercase">Agencia de Marketing Digital · CDMX</div>
+    </div>
+  </div>
+  <h1>Portafolio<br><span>Web</span></h1>
+  <p class="cover-sub">Diseño, desarrollo y optimización de sitios web orientados a conversión — landing pages, sitios corporativos y e-commerce para marcas que quieren resultados reales.</p>
+  <div class="cover-pills">
+    <span class="pill pill-red">Salud &amp; Médicos</span>
+    <span class="pill pill-blue">Real Estate</span>
+    <span class="pill pill-orange">Retail &amp; E-Commerce</span>
+    <span class="pill pill-brown">Bull Master Rodeo</span>
+    <span class="pill pill-green">Restaurantes &amp; Consultoría</span>
+  </div>
+  <div class="cover-footer">
+    <div>
+      <a href="https://www.agencysmart.mx">agencysmart.mx</a>
+      <span style="color:#333;margin:0 10px">·</span>
+      <a href="mailto:contacto@agencysmartdigital.com">contacto@agencysmartdigital.com</a>
+    </div>
+    <div style="text-align:right;font-size:12px;color:#555">Portafolio 2025</div>
+  </div>
+</div>
+
+<!-- SOBRE NOSOTROS -->
+<div class="page">
+  <div class="eyebrow">Sobre Agency Smart</div>
+  <h2 class="section-title">Full funnel. 100% orientados a resultados.</h2>
+  <p class="section-desc">Construimos sitios web que no solo se ven bien — cada página está pensada para generar leads, citas o ventas con rutas directas a WhatsApp, formularios optimizados y velocidad de carga que convierte.</p>
+  <div class="stats-grid">
+    <div class="stat"><div class="stat-num">6+</div><div class="stat-label">Plataformas de paid media</div></div>
+    <div class="stat"><div class="stat-num">5</div><div class="stat-label">Verticales de negocio</div></div>
+    <div class="stat"><div class="stat-num">48h</div><div class="stat-label">Propuesta desde primer contacto</div></div>
+    <div class="stat"><div class="stat-num">100%</div><div class="stat-label">Enfoque en performance</div></div>
+  </div>
+</div>
+
+<!-- SECTOR 01: SALUD -->
+<div class="page page-break">
+  <div class="eyebrow">Sector 01</div>
+  <h2 class="section-title">Salud &amp; Médicos</h2>
+  <p class="section-desc">Landing pages y sitios corporativos que generan citas, no solo visitas. Diseño mobile-first con CTA directo a WhatsApp, agenda en línea y cumplimiento de políticas COFEPRIS.</p>
+
+  <div class="sector-bar sector-salud">
+    <div class="sector-icon">＋</div>
+    <div>
+      <div class="sector-label">Plantillas recomendadas · Wix</div>
+      <div class="sector-name">Clínicas · Médicos Generales · Especialistas · Wellness</div>
+    </div>
+  </div>
+
+  <div class="grid-2">
+
+    <div class="card">
+      <div class="card-thumb" style="background:linear-gradient(135deg,#fff0f0,#ffd6d6)">
+        <div class="card-badge-tl" style="background:rgba(0,0,0,.6);color:#fff">Wix Template</div>
+        <div class="emoji">🏥</div>
+        <div class="card-title-thumb" style="color:#CC0000">CLÍNICA MÉDICA</div>
+        <div class="card-sub-thumb" style="color:#666">Header limpio · Servicios · Equipo · CTA WhatsApp</div>
+        <div class="card-badges">
+          <span class="badge" style="background:#CC0000;color:#fff">BOOKINGS</span>
+          <span class="badge badge-white">MOBILE FIRST</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-name">Medical Clinic Website Template</div>
+        <div class="card-desc">Diseño profesional para clínicas médicas. Sección de doctores, FAQ y noticias. CTA de agendado prominente y layout optimizado para pacientes.</div>
+        <div class="card-tags">
+          <span class="tag">Clínica general</span>
+          <span class="tag">Wix Bookings</span>
+          <span class="tag">Mobile-first</span>
+          <span class="tag">WhatsApp CTA</span>
+        </div>
+        <div class="card-footer">
+          <a href="https://www.wix.com/website-template/view/html/949" class="card-link" target="_blank">Ver plantilla →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-thumb" style="background:linear-gradient(135deg,#f0fff4,#c6f0d8)">
+        <div class="card-badge-tl" style="background:rgba(0,0,0,.6);color:#fff">Wix Template</div>
+        <div class="emoji">🌿</div>
+        <div class="card-title-thumb" style="color:#1a7a45">WELLNESS &amp; NUTRICIÓN</div>
+        <div class="card-sub-thumb" style="color:#666">Planes · Blog · Membresías · Bookings</div>
+        <div class="card-badges">
+          <span class="badge" style="background:#1a7a45;color:#fff">MEMBRESÍAS</span>
+          <span class="badge badge-white">TIENDA</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-name">Health &amp; Wellness (Bookings + Store)</div>
+        <div class="card-desc">Para nutriólogos, coaches y centros de bienestar. Clases online, venta de productos y membresías integradas en un mismo sitio.</div>
+        <div class="card-tags">
+          <span class="tag">Nutrición</span>
+          <span class="tag">Coach</span>
+          <span class="tag">Membresías</span>
+          <span class="tag">Tienda integrada</span>
+        </div>
+        <div class="card-footer">
+          <a href="https://www.wix.com/website-template/view/html/1446" class="card-link" target="_blank">Ver plantilla →</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- SECTOR 02: REAL ESTATE -->
+<div class="page page-break">
+  <div class="eyebrow">Sector 02</div>
+  <h2 class="section-title">Real Estate &amp; Bienes Raíces</h2>
+  <p class="section-desc">Microsites de preventa y portales para agentes que convierten interesados en leads calificados. Integración con Meta Lead Ads y Google Search.</p>
+
+  <div class="sector-bar sector-re">
+    <div class="sector-icon">🏠</div>
+    <div>
+      <div class="sector-label">Plantillas recomendadas · Wix</div>
+      <div class="sector-name">Agentes · Desarrolladoras · Preventa · Propiedades en renta</div>
+    </div>
+  </div>
+
+  <div class="grid-1">
+
+    <div class="card">
+      <div class="card-thumb" style="background:linear-gradient(135deg,#e8f1fb,#c5e3ff)">
+        <div class="card-badge-tl" style="background:rgba(0,0,0,.6);color:#fff">Wix Template</div>
+        <div class="emoji">🔑</div>
+        <div class="card-title-thumb" style="color:#1a5e9e">AGENTE INMOBILIARIO</div>
+        <div class="card-sub-thumb" style="color:#666">Propiedades · Testimonios · Filtro búsqueda · WhatsApp</div>
+        <div class="card-badges">
+          <span class="badge" style="background:#1a5e9e;color:#fff">CMS DINÁMICO</span>
+          <span class="badge badge-white">FORMULARIO</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-name">Real Estate Consultant</div>
+        <div class="card-desc">Para agentes independientes. Content Manager para gestionar listings dinámicamente. Wix Forms para captura de datos de compradores y vendedores con CTA directo a WhatsApp.</div>
+        <div class="card-tags">
+          <span class="tag">Agente independiente</span>
+          <span class="tag">CMS dinámico</span>
+          <span class="tag">WhatsApp CTA</span>
+          <span class="tag">Meta Lead Ads</span>
+        </div>
+        <div class="card-footer">
+          <a href="https://www.wix.com/website-template/view/html/1884" class="card-link" target="_blank">Ver plantilla →</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- SECTOR 03: E-COMMERCE -->
+<div class="page page-break">
+  <div class="eyebrow">Sector 03</div>
+  <h2 class="section-title">Retail &amp; E-Commerce</h2>
+  <p class="section-desc">Tiendas online con fichas de producto optimizadas, checkout rápido y campañas de Shopping integradas para ROAS real.</p>
+
+  <div class="sector-bar sector-ecom">
+    <div class="sector-icon">🛍️</div>
+    <div>
+      <div class="sector-label">Plantillas recomendadas · Wix Stores</div>
+      <div class="sector-name">Suplementos · Moda · Belleza · Retail</div>
+    </div>
+  </div>
+
+  <div class="grid-2">
+
+    <div class="card">
+      <div class="card-thumb" style="background:linear-gradient(135deg,#fff4ec,#ffe0c8)">
+        <div class="card-badge-tl" style="background:rgba(0,0,0,.6);color:#fff">Wix Stores</div>
+        <div class="card-badge-tr">⭐ Top</div>
+        <div class="emoji">💪</div>
+        <div class="card-title-thumb" style="color:#c0600a">SUPLEMENTOS &amp; SALUD</div>
+        <div class="card-sub-thumb" style="color:#666">Fichas UGC · Retargeting · CAPI · GA4</div>
+        <div class="card-badges">
+          <span class="badge" style="background:#c0600a;color:#fff">SHOPIFY</span>
+          <span class="badge badge-white">ROAS 3.8x</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-name">Health &amp; Supplements Store</div>
+        <div class="card-desc">Tienda de suplementos con creativos tipo beauty/UGC. Setup completo con GA4+GTM sin duplicidad de conversiones y retargeting por producto.</div>
+        <div class="card-tags">
+          <span class="tag">Shopify</span>
+          <span class="tag">GA4 + GTM</span>
+          <span class="tag">Meta retargeting</span>
+          <span class="tag">CAPI</span>
+        </div>
+        <div class="card-footer">
+          <a href="https://www.wix.com/website-template/view/html/5268" class="card-link" target="_blank">Ver plantilla →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-thumb" style="background:linear-gradient(135deg,#f0fff4,#c6edd9)">
+        <div class="card-badge-tl" style="background:rgba(0,0,0,.6);color:#fff">Wix Stores</div>
+        <div class="emoji">🌿</div>
+        <div class="card-title-thumb" style="color:#1a7a45">BELLEZA &amp; COSMÉTICOS</div>
+        <div class="card-sub-thumb" style="color:#666">Skincare · UGC · Suscripciones · CAPI Meta</div>
+        <div class="card-badges">
+          <span class="badge" style="background:#1a7a45;color:#fff">BEAUTY</span>
+          <span class="badge badge-white">REVIEWS</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-name">Beauty &amp; Cosmetics Store</div>
+        <div class="card-desc">Diseño limpio y natural para marcas de belleza y skincare. UGC integrado, sección de reviews y suscripciones de producto mensual.</div>
+        <div class="card-tags">
+          <span class="tag">Skincare</span>
+          <span class="tag">UGC</span>
+          <span class="tag">Meta CAPI</span>
+          <span class="tag">Suscripciones</span>
+        </div>
+        <div class="card-footer">
+          <a href="https://www.wix.com/website-template/view/html/1629" class="card-link" target="_blank">Ver plantilla →</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- SECTOR 04: BULL MASTER RODEO -->
+<div class="page page-break">
+  <div class="eyebrow">Sector 04</div>
+  <h2 class="section-title">Bull Master Rodeo</h2>
+  <p class="section-desc">E-commerce de accesorios y merch para la cultura rodeo: sombreros, llaveros, hebillas y artículos de cross-selling para eventos Bull Master.</p>
+
+  <div class="sector-bar sector-rodeo">
+    <div class="sector-icon">🤠</div>
+    <div>
+      <div class="sector-label" style="color:#c97d2a;opacity:1">Plantillas recomendadas · Wix Stores</div>
+      <div class="sector-name" style="color:#fff">Sombreros · Llaveros · Accesorios · Boletos de eventos</div>
+    </div>
+  </div>
+
+  <div class="grid-1">
+
+    <div class="card">
+      <div class="card-thumb" style="background:linear-gradient(135deg,#2a1500,#5c3000)">
+        <div class="card-badge-tl" style="background:rgba(0,0,0,.6);color:#fff">Wix Stores</div>
+        <div class="card-badge-tr">⭐ Top</div>
+        <div class="emoji">🤠</div>
+        <div class="card-title-thumb" style="color:#e8a84a">ACCESORIOS &amp; MERCH RODEO</div>
+        <div class="card-sub-thumb" style="color:#bbb">Sombreros · Llaveros · Hebillas · Feed Instagram</div>
+        <div class="card-badges">
+          <span class="badge" style="background:#e8a84a;color:#1a0a00">GALERÍA</span>
+          <span class="badge badge-light">INSTAGRAM</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-name">Bull Master Accesorios — Sombreros, Llaveros &amp; Merch</div>
+        <div class="card-desc">Galería dinámica de productos perfecta para sombreros, hebillas, llaveros y merch de rodeo. Feed de Instagram integrado para mostrar contenido UGC de participantes y eventos. Ideal para cross-selling en eventos Bull Master.</div>
+        <div class="card-tags">
+          <span class="tag">Sombreros &amp; llaveros</span>
+          <span class="tag">Feed Instagram</span>
+          <span class="tag">Cross-selling</span>
+          <span class="tag">Meta Ads</span>
+          <span class="tag">Merch rodeo</span>
+        </div>
+        <div class="card-footer">
+          <a href="https://www.wix.com/website-template/view/html/2119" class="card-link" target="_blank">Ver plantilla →</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- SECTOR 05: RESTAURANTES & CONSULTORÍA -->
+<div class="page page-break">
+  <div class="eyebrow">Sector 05</div>
+  <h2 class="section-title">Restaurantes &amp; Consultoría</h2>
+  <p class="section-desc">Menús digitales con reservaciones y delivery integrado, y sitios corporativos para empresas y despachos que necesitan generar leads calificados.</p>
+
+  <div class="sector-bar sector-resto">
+    <div class="sector-icon">🍽️</div>
+    <div>
+      <div class="sector-label">Plantillas recomendadas · Wix</div>
+      <div class="sector-name">Restaurantes · Dark Kitchens · Consultoría · B2B</div>
+    </div>
+  </div>
+
+  <div class="grid-2">
+
+    <div class="card">
+      <div class="card-thumb" style="background:linear-gradient(135deg,#1a0a00,#3d1800)">
+        <div class="card-badge-tl" style="background:rgba(255,255,255,.15);color:#fff">Wix Template</div>
+        <div class="emoji">🍽️</div>
+        <div class="card-title-thumb" style="color:#e8a84a">RESTAURANTE PREMIUM</div>
+        <div class="card-sub-thumb" style="color:#aaa">Menú · Reservaciones · Delivery · Galería</div>
+        <div class="card-badges">
+          <span class="badge" style="background:#c0600a;color:#fff">RESTAURANTES</span>
+          <span class="badge badge-light">PEDIDOS</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-name">Restaurant &amp; Food (Premium)</div>
+        <div class="card-desc">Para restaurantes y dark kitchens. Menú digital, sistema de reservaciones y delivery integrado con Google Maps y botón directo a WhatsApp.</div>
+        <div class="card-tags">
+          <span class="tag">Restaurante</span>
+          <span class="tag">Delivery</span>
+          <span class="tag">Reservaciones</span>
+          <span class="tag">Meta Ads</span>
+        </div>
+        <div class="card-footer">
+          <a href="https://www.wix.com/website-template/view/html/wh-1254" class="card-link" target="_blank">Ver plantilla →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-thumb" style="background:linear-gradient(135deg,#1a1a2e,#16213e)">
+        <div class="card-badge-tl" style="background:rgba(255,255,255,.15);color:#fff">Wix Template</div>
+        <div class="emoji">💼</div>
+        <div class="card-title-thumb" style="color:#fff">CONSULTORÍA &amp; B2B</div>
+        <div class="card-sub-thumb" style="color:#aaa">Servicios · Casos de éxito · Lead form · WhatsApp</div>
+        <div class="card-badges">
+          <span class="badge" style="background:#4a2c8a;color:#fff">CORPORATIVO</span>
+          <span class="badge badge-light">LEADS B2B</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-name">Business Consulting (Corporate)</div>
+        <div class="card-desc">Para despachos, consultoras y empresas B2B. Casos de éxito, equipo, servicios y formulario de contacto con CRM integrado.</div>
+        <div class="card-tags">
+          <span class="tag">Consultoría</span>
+          <span class="tag">B2B</span>
+          <span class="tag">CRM integrado</span>
+          <span class="tag">Google Ads</span>
+        </div>
+        <div class="card-footer">
+          <a href="https://www.wix.com/website-template/view/html/1757" class="card-link" target="_blank">Ver plantilla →</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- LO QUE INCLUYE -->
+  <div style="margin-top:20px">
+    <div class="eyebrow">Lo que incluye cada proyecto</div>
+    <h2 class="section-title" style="font-size:26px">Más que un sitio web</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon" style="background:#fff0f0">📐</div>
+        <div class="service-title">Diseño y desarrollo</div>
+        <div class="service-desc">Personalización completa: colores, logo, copy e imágenes de la marca.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon" style="background:#e8f4ff">📊</div>
+        <div class="service-title">Tracking completo</div>
+        <div class="service-desc">GA4 + GTM + píxeles de Meta y Google sin duplicidad de conversiones.</div>
+        <div class="platforms"><span class="platform">GA4</span><span class="platform">GTM</span><span class="platform">Meta Pixel</span><span class="platform">CAPI</span></div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon" style="background:#f0fff4">💬</div>
+        <div class="service-title">WhatsApp &amp; CRM</div>
+        <div class="service-desc">Botón flotante, chat integrado y conexión a CRM para que ningún lead se pierda.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon" style="background:#fff4ec">📱</div>
+        <div class="service-title">Mobile first</div>
+        <div class="service-desc">Diseño 100% responsive. +70% del tráfico es móvil — priorizamos esa experiencia.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon" style="background:#f5f0ff">⚡</div>
+        <div class="service-title">Velocidad optimizada</div>
+        <div class="service-desc">Core Web Vitals en verde. Sitios rápidos posicionan mejor y convierten más.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon" style="background:#fff8e6">🎯</div>
+        <div class="service-title">Listo para ads</div>
+        <div class="service-desc">UTMs, landing pages por campaña y páginas de gracias con tracking incluido.</div>
+        <div class="platforms"><span class="platform">Google Ads</span><span class="platform">Meta Ads</span><span class="platform">TikTok</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="page">
+  <div class="cta">
+    <div>
+      <h2>¿Listo para tu<br><span>siguiente proyecto?</span></h2>
+      <p>Cuéntanos tu negocio y en 48 horas<br>tienes propuesta, plantilla y timeline.</p>
+    </div>
+    <div class="cta-contacts">
+      <div class="cta-row"><div class="cta-dot"></div><div class="cta-info"><span>WhatsApp</span><a href="https://wa.me/525561240257">+52 55 6124 0257</a></div></div>
+      <div class="cta-row"><div class="cta-dot"></div><div class="cta-info"><span>Email</span><a href="mailto:contacto@agencysmartdigital.com">contacto@agencysmartdigital.com</a></div></div>
+      <div class="cta-row"><div class="cta-dot"></div><div class="cta-info"><span>Instagram</span><a href="https://instagram.com/agencysmart_mx">@agencysmart_mx</a></div></div>
+      <div class="cta-row"><div class="cta-dot"></div><div class="cta-info"><span>Sitio web</span><a href="https://www.agencysmart.mx">agencysmart.mx</a></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <div><strong>Agency Smart</strong> · Agencia de Marketing Digital · CDMX, México</div>
+  <div>agencysmart.mx · Portafolio Web 2025</div>
+</div>
+
+</body>
+</html>
