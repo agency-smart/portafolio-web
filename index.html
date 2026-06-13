@@ -160,6 +160,26 @@ body{font-family:'Inter',sans-serif;background:#fff;color:#111;-webkit-print-col
     .stats-grid{grid-template-columns:1fr 1fr}
     .services-grid{grid-template-columns:1fr}
   }
+
+  .iframe-thumb {
+    width:100%;
+    height:100%;
+    border:none;
+    transform-origin: top left;
+    transform: scale(0.35);
+    width: 286%;
+    height: 286%;
+    pointer-events: none;
+    position: absolute;
+    top: 0; left: 0;
+  }
+  .iframe-overlay {
+    position:absolute;
+    inset:0;
+    z-index:1;
+    cursor:pointer;
+    background:transparent;
+  }
 </style>
 </head>
 <body>
@@ -223,36 +243,10 @@ body{font-family:'Inter',sans-serif;background:#fff;color:#111;-webkit-print-col
 
     <div class="card">
       <div class="card-thumb" style="background:#f0f4f8;padding:0;overflow:hidden">
-        <div class="card-badge-tl" style="background:rgba(0,0,0,.6);color:#fff;z-index:2">Wix Template</div>
-        <svg viewBox="0 0 400 190" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
-          <!-- Browser bar -->
-          <rect width="400" height="190" fill="#f0f4f8"/>
-          <rect width="400" height="22" fill="#e2e8f0"/>
-          <circle cx="12" cy="11" r="4" fill="#fc5c57"/><circle cx="24" cy="11" r="4" fill="#fdbc40"/><circle cx="36" cy="11" r="4" fill="#33c748"/>
-          <rect x="50" y="5" width="300" height="12" rx="6" fill="#fff"/>
-          <!-- Hero -->
-          <rect y="22" width="400" height="70" fill="#1a3a5c"/>
-          <text x="200" y="52" text-anchor="middle" fill="#fff" font-size="13" font-weight="bold" font-family="Arial">Clínica Médica Especializada</text>
-          <text x="200" y="68" text-anchor="middle" fill="#90caf9" font-size="8" font-family="Arial">Tu salud, nuestra prioridad · Agenda tu cita hoy</text>
-          <rect x="155" y="74" width="90" height="12" rx="6" fill="#CC0000"/>
-          <text x="200" y="83" text-anchor="middle" fill="#fff" font-size="7" font-family="Arial">Agendar Consulta</text>
-          <!-- Services row -->
-          <rect y="94" width="400" height="55" fill="#fff"/>
-          <text x="200" y="108" text-anchor="middle" fill="#333" font-size="8" font-weight="bold" font-family="Arial">Nuestros Servicios</text>
-          <rect x="20" y="112" width="100" height="30" rx="4" fill="#f8f9fa" stroke="#eee" stroke-width="1"/>
-          <text x="70" y="124" text-anchor="middle" fill="#CC0000" font-size="9" font-family="Arial">🩺</text>
-          <text x="70" y="136" text-anchor="middle" fill="#555" font-size="7" font-family="Arial">Medicina General</text>
-          <rect x="150" y="112" width="100" height="30" rx="4" fill="#f8f9fa" stroke="#eee" stroke-width="1"/>
-          <text x="200" y="124" text-anchor="middle" fill="#CC0000" font-size="9" font-family="Arial">💊</text>
-          <text x="200" y="136" text-anchor="middle" fill="#555" font-size="7" font-family="Arial">Especialidades</text>
-          <rect x="280" y="112" width="100" height="30" rx="4" fill="#f8f9fa" stroke="#eee" stroke-width="1"/>
-          <text x="330" y="124" text-anchor="middle" fill="#CC0000" font-size="9" font-family="Arial">📅</text>
-          <text x="330" y="136" text-anchor="middle" fill="#555" font-size="7" font-family="Arial">Citas en línea</text>
-          <!-- Team -->
-          <rect y="151" width="400" height="39" fill="#f8f9fa"/>
-          <text x="200" y="163" text-anchor="middle" fill="#333" font-size="7" font-weight="bold" font-family="Arial">Nuestro Equipo Médico</text>
-          <circle cx="100" cy="175" r="8" fill="#ddd"/><circle cx="200" cy="175" r="8" fill="#ddd"/><circle cx="300" cy="175" r="8" fill="#ddd"/>
-        </svg>
+        <div class="card-badge-tl" style="background:rgba(0,0,0,.7);color:#fff;z-index:2;font-weight:800">Wix Template</div>
+        
+        <iframe class="iframe-thumb" src="https://www.wix.com/website-template/view/html/949" loading="lazy" sandbox="allow-scripts allow-same-origin" title="Preview"></iframe>
+        <div class="iframe-overlay"></div>
       </div>
       <div class="card-body">
         <div class="card-name">Medical Clinic Website Template</div>
@@ -271,34 +265,10 @@ body{font-family:'Inter',sans-serif;background:#fff;color:#111;-webkit-print-col
 
     <div class="card">
       <div class="card-thumb" style="background:#f0faf5;padding:0;overflow:hidden">
-        <div class="card-badge-tl" style="background:rgba(0,0,0,.6);color:#fff;z-index:2">Wix Template</div>
-        <svg viewBox="0 0 400 190" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
-          <rect width="400" height="190" fill="#f0faf5"/>
-          <rect width="400" height="22" fill="#e2e8f0"/>
-          <circle cx="12" cy="11" r="4" fill="#fc5c57"/><circle cx="24" cy="11" r="4" fill="#fdbc40"/><circle cx="36" cy="11" r="4" fill="#33c748"/>
-          <rect x="50" y="5" width="300" height="12" rx="6" fill="#fff"/>
-          <rect y="22" width="400" height="70" fill="#1a7a45"/>
-          <text x="200" y="50" text-anchor="middle" fill="#fff" font-size="13" font-weight="bold" font-family="Arial">Centro de Bienestar</text>
-          <text x="200" y="64" text-anchor="middle" fill="#a8e6c0" font-size="8" font-family="Arial">Nutrición · Yoga · Meditación · Coaching</text>
-          <rect x="150" y="72" width="100" height="12" rx="6" fill="#fff"/>
-          <text x="200" y="81" text-anchor="middle" fill="#1a7a45" font-size="7" font-family="Arial">Ver Programas</text>
-          <rect y="94" width="400" height="40" fill="#fff"/>
-          <text x="200" y="107" text-anchor="middle" fill="#333" font-size="8" font-weight="bold" font-family="Arial">Planes y Membresías</text>
-          <rect x="20" y="112" width="80" height="18" rx="4" fill="#e8f8ef" stroke="#1a7a45" stroke-width="1"/>
-          <text x="60" y="123" text-anchor="middle" fill="#1a7a45" font-size="7" font-family="Arial">Plan Básico</text>
-          <rect x="115" y="112" width="80" height="18" rx="4" fill="#1a7a45"/>
-          <text x="155" y="123" text-anchor="middle" fill="#fff" font-size="7" font-family="Arial">Plan Premium</text>
-          <rect x="210" y="112" width="80" height="18" rx="4" fill="#e8f8ef" stroke="#1a7a45" stroke-width="1"/>
-          <text x="250" y="123" text-anchor="middle" fill="#1a7a45" font-size="7" font-family="Arial">Plan Anual</text>
-          <rect y="136" width="400" height="54" fill="#f0faf5"/>
-          <text x="200" y="150" text-anchor="middle" fill="#333" font-size="8" font-weight="bold" font-family="Arial">Blog de Bienestar</text>
-          <rect x="20" y="155" width="110" height="28" rx="4" fill="#fff" stroke="#ddd" stroke-width="1"/>
-          <rect x="150" y="155" width="110" height="28" rx="4" fill="#fff" stroke="#ddd" stroke-width="1"/>
-          <rect x="280" y="155" width="100" height="28" rx="4" fill="#fff" stroke="#ddd" stroke-width="1"/>
-          <text x="75" y="172" text-anchor="middle" fill="#888" font-size="6" font-family="Arial">Artículo reciente</text>
-          <text x="205" y="172" text-anchor="middle" fill="#888" font-size="6" font-family="Arial">Artículo reciente</text>
-          <text x="330" y="172" text-anchor="middle" fill="#888" font-size="6" font-family="Arial">Artículo reciente</text>
-        </svg>
+        <div class="card-badge-tl" style="background:rgba(0,0,0,.7);color:#fff;z-index:2;font-weight:800">Wix Template</div>
+        
+        <iframe class="iframe-thumb" src="https://www.wix.com/website-template/view/html/1446" loading="lazy" sandbox="allow-scripts allow-same-origin" title="Preview"></iframe>
+        <div class="iframe-overlay"></div>
       </div>
       <div class="card-body">
         <div class="card-name">Health &amp; Wellness (Bookings + Store)</div>
@@ -336,37 +306,10 @@ body{font-family:'Inter',sans-serif;background:#fff;color:#111;-webkit-print-col
 
     <div class="card">
       <div class="card-thumb" style="background:#e8f1fb;padding:0;overflow:hidden">
-        <div class="card-badge-tl" style="background:rgba(0,0,0,.6);color:#fff;z-index:2">Wix Template</div>
-        <svg viewBox="0 0 400 190" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
-          <rect width="400" height="190" fill="#e8f1fb"/>
-          <rect width="400" height="22" fill="#e2e8f0"/>
-          <circle cx="12" cy="11" r="4" fill="#fc5c57"/><circle cx="24" cy="11" r="4" fill="#fdbc40"/><circle cx="36" cy="11" r="4" fill="#33c748"/>
-          <rect x="50" y="5" width="300" height="12" rx="6" fill="#fff"/>
-          <rect y="22" width="400" height="60" fill="#1a3a6e"/>
-          <text x="200" y="46" text-anchor="middle" fill="#fff" font-size="13" font-weight="bold" font-family="Arial">Agente Inmobiliario</text>
-          <text x="200" y="60" text-anchor="middle" fill="#90b8e8" font-size="8" font-family="Arial">Compra · Venta · Renta · Inversión</text>
-          <rect y="82" width="400" height="14" fill="#fff"/>
-          <rect x="10" y="85" width="80" height="8" rx="4" fill="#eee"/>
-          <rect x="100" y="85" width="80" height="8" rx="4" fill="#eee"/>
-          <rect x="190" y="85" width="80" height="8" rx="4" fill="#eee"/>
-          <rect x="310" y="84" width="80" height="10" rx="5" fill="#1a5e9e"/>
-          <text x="350" y="91" text-anchor="middle" fill="#fff" font-size="6" font-family="Arial">Buscar</text>
-          <!-- Properties grid -->
-          <rect y="98" width="400" height="60" fill="#f5f8fc"/>
-          <text x="200" y="110" text-anchor="middle" fill="#333" font-size="8" font-weight="bold" font-family="Arial">Propiedades Destacadas</text>
-          <rect x="15" y="114" width="110" height="38" rx="4" fill="#fff" stroke="#ddd" stroke-width="1"/>
-          <rect x="15" y="114" width="110" height="20" rx="4" fill="#c5d8f0"/>
-          <text x="70" y="143" text-anchor="middle" fill="#333" font-size="6" font-family="Arial">$2,500,000 MXN</text>
-          <rect x="145" y="114" width="110" height="38" rx="4" fill="#fff" stroke="#ddd" stroke-width="1"/>
-          <rect x="145" y="114" width="110" height="20" rx="4" fill="#c5d8f0"/>
-          <text x="200" y="143" text-anchor="middle" fill="#333" font-size="6" font-family="Arial">$1,800,000 MXN</text>
-          <rect x="275" y="114" width="110" height="38" rx="4" fill="#fff" stroke="#ddd" stroke-width="1"/>
-          <rect x="275" y="114" width="110" height="20" rx="4" fill="#c5d8f0"/>
-          <text x="330" y="143" text-anchor="middle" fill="#333" font-size="6" font-family="Arial">$3,200,000 MXN</text>
-          <!-- Testimonials -->
-          <rect y="160" width="400" height="30" fill="#fff"/>
-          <text x="200" y="172" text-anchor="middle" fill="#888" font-size="7" font-family="Arial">"Encontré mi casa ideal en menos de un mes" — Cliente satisfecho</text>
-        </svg>
+        <div class="card-badge-tl" style="background:rgba(0,0,0,.7);color:#fff;z-index:2;font-weight:800">Wix Template</div>
+        
+        <iframe class="iframe-thumb" src="https://www.wix.com/website-template/view/html/1884" loading="lazy" sandbox="allow-scripts allow-same-origin" title="Preview"></iframe>
+        <div class="iframe-overlay"></div>
       </div>
       <div class="card-body">
         <div class="card-name">Real Estate Consultant</div>
@@ -404,39 +347,10 @@ body{font-family:'Inter',sans-serif;background:#fff;color:#111;-webkit-print-col
 
     <div class="card">
       <div class="card-thumb" style="background:#fff4ec;padding:0;overflow:hidden">
-        <div class="card-badge-tl" style="background:#96bf48;color:#fff;z-index:2;font-weight:800">Shopify Theme</div>
+        <div class="card-badge-tl" style="background:#96bf48;color:#fff;z-index:2;font-weight:800">Shopify · Sense</div>
         <div class="card-badge-tr" style="z-index:2">⭐ Top</div>
-        <svg viewBox="0 0 400 190" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
-          <rect width="400" height="190" fill="#fff8f3"/>
-          <rect width="400" height="22" fill="#e2e8f0"/>
-          <circle cx="12" cy="11" r="4" fill="#fc5c57"/><circle cx="24" cy="11" r="4" fill="#fdbc40"/><circle cx="36" cy="11" r="4" fill="#33c748"/>
-          <rect x="50" y="5" width="300" height="12" rx="6" fill="#fff"/>
-          <rect y="22" width="400" height="50" fill="#1a0a00"/>
-          <text x="200" y="43" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold" font-family="Arial">FitLife Suplementos</text>
-          <text x="200" y="57" text-anchor="middle" fill="#c97d2a" font-size="7" font-family="Arial">Proteínas · Vitaminas · Pre-entreno · Aminoácidos</text>
-          <!-- Product grid -->
-          <rect y="74" width="400" height="75" fill="#fff"/>
-          <text x="200" y="86" text-anchor="middle" fill="#333" font-size="8" font-weight="bold" font-family="Arial">Productos Destacados</text>
-          <rect x="15" y="90" width="80" height="54" rx="4" fill="#f5f0eb" stroke="#eee" stroke-width="1"/>
-          <rect x="15" y="90" width="80" height="32" rx="4" fill="#e8d5c0"/>
-          <text x="55" y="133" text-anchor="middle" fill="#333" font-size="6" font-family="Arial">Proteína Whey</text>
-          <text x="55" y="141" text-anchor="middle" fill="#c0600a" font-size="7" font-weight="bold" font-family="Arial">$599</text>
-          <rect x="110" y="90" width="80" height="54" rx="4" fill="#f5f0eb" stroke="#eee" stroke-width="1"/>
-          <rect x="110" y="90" width="80" height="32" rx="4" fill="#e8d5c0"/>
-          <text x="150" y="133" text-anchor="middle" fill="#333" font-size="6" font-family="Arial">Pre-entreno</text>
-          <text x="150" y="141" text-anchor="middle" fill="#c0600a" font-size="7" font-weight="bold" font-family="Arial">$449</text>
-          <rect x="205" y="90" width="80" height="54" rx="4" fill="#f5f0eb" stroke="#eee" stroke-width="1"/>
-          <rect x="205" y="90" width="80" height="32" rx="4" fill="#e8d5c0"/>
-          <text x="245" y="133" text-anchor="middle" fill="#333" font-size="6" font-family="Arial">Vitaminas</text>
-          <text x="245" y="141" text-anchor="middle" fill="#c0600a" font-size="7" font-weight="bold" font-family="Arial">$349</text>
-          <rect x="300" y="90" width="80" height="54" rx="4" fill="#f5f0eb" stroke="#eee" stroke-width="1"/>
-          <rect x="300" y="90" width="80" height="32" rx="4" fill="#e8d5c0"/>
-          <text x="340" y="133" text-anchor="middle" fill="#333" font-size="6" font-family="Arial">Creatina</text>
-          <text x="340" y="141" text-anchor="middle" fill="#c0600a" font-size="7" font-weight="bold" font-family="Arial">$299</text>
-          <!-- Cart bar -->
-          <rect y="151" width="400" height="39" fill="#c0600a"/>
-          <text x="200" y="174" text-anchor="middle" fill="#fff" font-size="8" font-weight="bold" font-family="Arial">🛒  Envío gratis en compras mayores a $800</text>
-        </svg>
+        <iframe class="iframe-thumb" src="https://themes.shopify.com/themes/sense/styles/clean/preview" loading="lazy" sandbox="allow-scripts allow-same-origin" title="Preview"></iframe>
+        <div class="iframe-overlay"></div>
       </div>
       <div class="card-body">
         <div class="card-name">Health &amp; Supplements Store</div>
@@ -455,37 +369,10 @@ body{font-family:'Inter',sans-serif;background:#fff;color:#111;-webkit-print-col
 
     <div class="card">
       <div class="card-thumb" style="background:#f5fbf7;padding:0;overflow:hidden">
-        <div class="card-badge-tl" style="background:#96bf48;color:#fff;z-index:2;font-weight:800">Shopify Theme</div>
-        <svg viewBox="0 0 400 190" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
-          <rect width="400" height="190" fill="#f5fbf7"/>
-          <rect width="400" height="22" fill="#e2e8f0"/>
-          <circle cx="12" cy="11" r="4" fill="#fc5c57"/><circle cx="24" cy="11" r="4" fill="#fdbc40"/><circle cx="36" cy="11" r="4" fill="#33c748"/>
-          <rect x="50" y="5" width="300" height="12" rx="6" fill="#fff"/>
-          <rect y="22" width="400" height="55" fill="#2d5a3d"/>
-          <text x="200" y="45" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold" font-family="Arial">Natura Skincare</text>
-          <text x="200" y="58" text-anchor="middle" fill="#a8d5b5" font-size="7" font-family="Arial">Ingredientes naturales · Cruelty free · Sustentable</text>
-          <rect y="79" width="400" height="70" fill="#fff"/>
-          <text x="200" y="92" text-anchor="middle" fill="#333" font-size="8" font-weight="bold" font-family="Arial">Más Vendidos</text>
-          <rect x="20" y="97" width="82" height="46" rx="4" fill="#e8f5ec" stroke="#c6edd9" stroke-width="1"/>
-          <rect x="20" y="97" width="82" height="28" rx="4" fill="#c6edd9"/>
-          <text x="61" y="134" text-anchor="middle" fill="#2d5a3d" font-size="6" font-family="Arial">Sérum Vitamina C</text>
-          <text x="61" y="141" text-anchor="middle" fill="#2d5a3d" font-size="7" font-weight="bold" font-family="Arial">$420</text>
-          <rect x="115" y="97" width="82" height="46" rx="4" fill="#e8f5ec" stroke="#c6edd9" stroke-width="1"/>
-          <rect x="115" y="97" width="82" height="28" rx="4" fill="#c6edd9"/>
-          <text x="156" y="134" text-anchor="middle" fill="#2d5a3d" font-size="6" font-family="Arial">Crema Hidratante</text>
-          <text x="156" y="141" text-anchor="middle" fill="#2d5a3d" font-size="7" font-weight="bold" font-family="Arial">$380</text>
-          <rect x="210" y="97" width="82" height="46" rx="4" fill="#e8f5ec" stroke="#c6edd9" stroke-width="1"/>
-          <rect x="210" y="97" width="82" height="28" rx="4" fill="#c6edd9"/>
-          <text x="251" y="134" text-anchor="middle" fill="#2d5a3d" font-size="6" font-family="Arial">Tónico Facial</text>
-          <text x="251" y="141" text-anchor="middle" fill="#2d5a3d" font-size="7" font-weight="bold" font-family="Arial">$290</text>
-          <rect x="305" y="97" width="75" height="46" rx="4" fill="#e8f5ec" stroke="#c6edd9" stroke-width="1"/>
-          <rect x="305" y="97" width="75" height="28" rx="4" fill="#c6edd9"/>
-          <text x="342" y="134" text-anchor="middle" fill="#2d5a3d" font-size="6" font-family="Arial">Mascarilla</text>
-          <text x="342" y="141" text-anchor="middle" fill="#2d5a3d" font-size="7" font-weight="bold" font-family="Arial">$350</text>
-          <rect y="151" width="400" height="39" fill="#f0fff4"/>
-          <text x="200" y="165" text-anchor="middle" fill="#2d5a3d" font-size="7" font-weight="bold" font-family="Arial">⭐⭐⭐⭐⭐  Reseñas de clientes</text>
-          <text x="200" y="178" text-anchor="middle" fill="#888" font-size="6" font-family="Arial">"Mi piel nunca había lucido tan bien" — María G.</text>
-        </svg>
+        <div class="card-badge-tl" style="background:#96bf48;color:#fff;z-index:2;font-weight:800">Shopify · Craft</div>
+        
+        <iframe class="iframe-thumb" src="https://themes.shopify.com/themes/craft/styles/default/preview" loading="lazy" sandbox="allow-scripts allow-same-origin" title="Preview"></iframe>
+        <div class="iframe-overlay"></div>
       </div>
       <div class="card-body">
         <div class="card-name">Beauty &amp; Cosmetics Store</div>
@@ -523,86 +410,10 @@ body{font-family:'Inter',sans-serif;background:#fff;color:#111;-webkit-print-col
 
     <div class="card">
       <div class="card-thumb" style="background:#1a0a00;padding:0;overflow:hidden">
-        <div class="card-badge-tl" style="background:#96bf48;color:#fff;z-index:2;font-weight:800">Shopify Theme</div>
+        <div class="card-badge-tl" style="background:#96bf48;color:#fff;z-index:2;font-weight:800">Shopify · Ride</div>
         <div class="card-badge-tr" style="z-index:2">⭐ Top</div>
-        <svg viewBox="0 0 400 190" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
-          <defs>
-            <linearGradient id="hero" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#2a1000"/>
-              <stop offset="100%" stop-color="#1a0800"/>
-            </linearGradient>
-          </defs>
-          <!-- Background -->
-          <rect width="400" height="190" fill="#120800"/>
-          <!-- Browser bar -->
-          <rect width="400" height="22" fill="#0a0500"/>
-          <circle cx="12" cy="11" r="4" fill="#fc5c57"/>
-          <circle cx="24" cy="11" r="4" fill="#fdbc40"/>
-          <circle cx="36" cy="11" r="4" fill="#33c748"/>
-          <rect x="50" y="5" width="300" height="12" rx="6" fill="#1a0a00"/>
-          <text x="200" y="14.5" text-anchor="middle" fill="#c8956a" font-size="6" font-family="Arial">bullmasterrodeo.com</text>
-          <!-- Nav -->
-          <rect y="22" width="400" height="16" fill="#0f0600"/>
-          <text x="30" y="33" fill="#e8a84a" font-size="7" font-weight="bold" font-family="Arial">BULL MASTER</text>
-          <text x="160" y="33" fill="#c8956a" font-size="6" font-family="Arial">Tienda</text>
-          <text x="210" y="33" fill="#c8956a" font-size="6" font-family="Arial">Eventos</text>
-          <text x="260" y="33" fill="#c8956a" font-size="6" font-family="Arial">Nosotros</text>
-          <rect x="330" y="25" width="55" height="10" rx="5" fill="#c0600a"/>
-          <text x="357" y="32.5" text-anchor="middle" fill="#fff" font-size="6" font-family="Arial">Carrito 🛒</text>
-          <!-- Hero banner -->
-          <rect y="38" width="400" height="52" fill="url(#hero)"/>
-          <!-- Decorative rope lines -->
-          <path d="M0 42 Q100 38 200 42 Q300 46 400 42" stroke="#4d2800" stroke-width="1" fill="none" opacity="0.5"/>
-          <path d="M0 85 Q100 81 200 85 Q300 89 400 85" stroke="#4d2800" stroke-width="1" fill="none" opacity="0.5"/>
-          <!-- Hero text -->
-          <text x="200" y="58" text-anchor="middle" fill="#e8a84a" font-size="14" font-weight="bold" font-family="Georgia, serif">Bull Master Rodeo</text>
-          <text x="200" y="72" text-anchor="middle" fill="#c8956a" font-size="7" font-family="Arial">Vestimenta · Accesorios · Boletos de Eventos</text>
-          <rect x="145" y="78" width="110" height="10" rx="5" fill="#c0600a"/>
-          <text x="200" y="85.5" text-anchor="middle" fill="#fff" font-size="6" font-family="Arial">Ver Catálogo Completo</text>
-          <!-- Products row -->
-          <rect y="92" width="400" height="58" fill="#1a0a00"/>
-          <text x="200" y="104" text-anchor="middle" fill="#e8a84a" font-size="7.5" font-weight="bold" font-family="Arial">Productos Más Vendidos</text>
-          <!-- Product 1: Sombrero vaquero -->
-          <rect x="10" y="108" width="84" height="38" rx="4" fill="#2a1400"/>
-          <rect x="10" y="108" width="84" height="22" rx="3" fill="#3d1f00"/>
-          <!-- Sombrero shape SVG -->
-          <ellipse cx="52" cy="119" rx="22" ry="5" fill="#6b3a00"/>
-          <path d="M34 119 Q37 113 52 111 Q67 113 70 119" fill="#8b4e00" stroke="#6b3a00" stroke-width="0.5"/>
-          <text x="52" y="137" text-anchor="middle" fill="#e8c090" font-size="5.5" font-family="Arial">Sombrero Vaquero</text>
-          <text x="52" y="143" text-anchor="middle" fill="#e8a84a" font-size="6.5" font-weight="bold" font-family="Arial">$1,250</text>
-          <!-- Product 2: Botas -->
-          <rect x="104" y="108" width="84" height="38" rx="4" fill="#2a1400"/>
-          <rect x="104" y="108" width="84" height="22" rx="3" fill="#3d1f00"/>
-          <!-- Boot shape -->
-          <path d="M135 127 L133 112 Q140 110 147 112 L148 120 L158 120 L158 127 Z" fill="#5c3000" stroke="#8b4e00" stroke-width="0.5"/>
-          <text x="146" y="137" text-anchor="middle" fill="#e8c090" font-size="5.5" font-family="Arial">Botas Western</text>
-          <text x="146" y="143" text-anchor="middle" fill="#e8a84a" font-size="6.5" font-weight="bold" font-family="Arial">$2,800</text>
-          <!-- Product 3: Hebilla -->
-          <rect x="198" y="108" width="84" height="38" rx="4" fill="#2a1400"/>
-          <rect x="198" y="108" width="84" height="22" rx="3" fill="#3d1f00"/>
-          <!-- Buckle shape -->
-          <rect x="228" y="113" width="24" height="15" rx="3" fill="#c8a000" stroke="#e8c000" stroke-width="1"/>
-          <rect x="232" y="117" width="16" height="7" rx="1" fill="#3d1f00"/>
-          <text x="240" y="137" text-anchor="middle" fill="#e8c090" font-size="5.5" font-family="Arial">Hebilla Rodeo</text>
-          <text x="240" y="143" text-anchor="middle" fill="#e8a84a" font-size="6.5" font-weight="bold" font-family="Arial">$680</text>
-          <!-- Product 4: Camisa western -->
-          <rect x="292" y="108" width="84" height="38" rx="4" fill="#2a1400"/>
-          <rect x="292" y="108" width="84" height="22" rx="3" fill="#3d1f00"/>
-          <!-- Shirt shape -->
-          <path d="M324 112 L320 115 L322 127 L334 127 L336 115 Z" fill="#8b2000" stroke="#c03000" stroke-width="0.5"/>
-          <path d="M324 112 L320 115" stroke="#c03000" stroke-width="1"/>
-          <path d="M336 112 L340 115" stroke="#c03000" stroke-width="1"/>
-          <text x="334" y="137" text-anchor="middle" fill="#e8c090" font-size="5.5" font-family="Arial">Camisa Western</text>
-          <text x="334" y="143" text-anchor="middle" fill="#e8a84a" font-size="6.5" font-weight="bold" font-family="Arial">$950</text>
-          <!-- Footer bar: events ticket -->
-          <rect y="152" width="400" height="38" fill="#0f0600"/>
-          <rect x="10" y="157" width="180" height="26" rx="4" fill="#2a1000"/>
-          <text x="100" y="167" text-anchor="middle" fill="#e8a84a" font-size="6.5" font-weight="bold" font-family="Arial">🎟  Próximo Evento</text>
-          <text x="100" y="177" text-anchor="middle" fill="#c8956a" font-size="6" font-family="Arial">Gran Rodeo · Jul 20 · Monterrey</text>
-          <rect x="210" y="157" width="180" height="26" rx="4" fill="#c0600a"/>
-          <text x="300" y="167" text-anchor="middle" fill="#fff" font-size="6.5" font-weight="bold" font-family="Arial">🤠  Comprar Boletos</text>
-          <text x="300" y="177" text-anchor="middle" fill="#ffe0b2" font-size="6" font-family="Arial">Desde $350 por persona</text>
-        </svg>
+        <iframe class="iframe-thumb" src="https://themes.shopify.com/themes/ride/styles/default/preview" loading="lazy" sandbox="allow-scripts allow-same-origin" title="Preview"></iframe>
+        <div class="iframe-overlay"></div>
       </div>
       <div class="card-body">
         <div class="card-name">Bull Master Accesorios — Sombreros, Llaveros &amp; Merch</div>
@@ -640,36 +451,10 @@ body{font-family:'Inter',sans-serif;background:#fff;color:#111;-webkit-print-col
 
     <div class="card">
       <div class="card-thumb" style="background:#111;padding:0;overflow:hidden">
-        <div class="card-badge-tl" style="background:rgba(255,255,255,.15);color:#fff;z-index:2">Wix Template</div>
-        <svg viewBox="0 0 400 190" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
-          <rect width="400" height="190" fill="#0d0d0d"/>
-          <rect width="400" height="22" fill="#111"/>
-          <circle cx="12" cy="11" r="4" fill="#fc5c57"/><circle cx="24" cy="11" r="4" fill="#fdbc40"/><circle cx="36" cy="11" r="4" fill="#33c748"/>
-          <rect x="50" y="5" width="300" height="12" rx="6" fill="#1a1a1a"/>
-          <rect y="22" width="400" height="60" fill="#1a0800"/>
-          <text x="200" y="46" text-anchor="middle" fill="#f5c842" font-size="13" font-weight="bold" font-family="Georgia, serif">La Casa del Sabor</text>
-          <text x="200" y="60" text-anchor="middle" fill="#c8956a" font-size="7" font-family="Arial">Cocina tradicional · Reservaciones · Delivery</text>
-          <rect x="130" y="66" width="140" height="12" rx="6" fill="#c0600a"/>
-          <text x="200" y="75" text-anchor="middle" fill="#fff" font-size="7" font-family="Arial">Reservar Mesa</text>
-          <rect y="84" width="400" height="12" fill="#111"/>
-          <text x="80" y="93" text-anchor="middle" fill="#c8956a" font-size="7" font-family="Arial">Menú</text>
-          <text x="160" y="93" text-anchor="middle" fill="#c8956a" font-size="7" font-family="Arial">Nosotros</text>
-          <text x="240" y="93" text-anchor="middle" fill="#c8956a" font-size="7" font-family="Arial">Galería</text>
-          <text x="320" y="93" text-anchor="middle" fill="#c8956a" font-size="7" font-family="Arial">Contacto</text>
-          <rect y="98" width="400" height="55" fill="#1a1a1a"/>
-          <text x="200" y="112" text-anchor="middle" fill="#f5c842" font-size="8" font-weight="bold" font-family="Arial">Platillos del Día</text>
-          <rect x="15" y="116" width="110" height="32" rx="4" fill="#2a2a2a"/>
-          <rect x="15" y="116" width="110" height="18" rx="3" fill="#3d2000"/>
-          <text x="70" y="140" text-anchor="middle" fill="#f5c842" font-size="6" font-family="Arial">Filete a la parrilla · $285</text>
-          <rect x="145" y="116" width="110" height="32" rx="4" fill="#2a2a2a"/>
-          <rect x="145" y="116" width="110" height="18" rx="3" fill="#3d2000"/>
-          <text x="200" y="140" text-anchor="middle" fill="#f5c842" font-size="6" font-family="Arial">Pasta Carbonara · $195</text>
-          <rect x="275" y="116" width="110" height="32" rx="4" fill="#2a2a2a"/>
-          <rect x="275" y="116" width="110" height="18" rx="3" fill="#3d2000"/>
-          <text x="330" y="140" text-anchor="middle" fill="#f5c842" font-size="6" font-family="Arial">Risotto · $225</text>
-          <rect y="155" width="400" height="35" fill="#c0600a"/>
-          <text x="200" y="176" text-anchor="middle" fill="#fff" font-size="8" font-weight="bold" font-family="Arial">🛵  Pedidos a domicilio disponibles</text>
-        </svg>
+        <div class="card-badge-tl" style="background:rgba(255,255,255,.15);color:#fff;z-index:2;font-weight:800">Wix Template</div>
+        
+        <iframe class="iframe-thumb" src="https://www.wix.com/website-template/view/html/wh-1254" loading="lazy" sandbox="allow-scripts allow-same-origin" title="Preview"></iframe>
+        <div class="iframe-overlay"></div>
       </div>
       <div class="card-body">
         <div class="card-name">Restaurant &amp; Food (Premium)</div>
@@ -688,39 +473,10 @@ body{font-family:'Inter',sans-serif;background:#fff;color:#111;-webkit-print-col
 
     <div class="card">
       <div class="card-thumb" style="background:#0f1929;padding:0;overflow:hidden">
-        <div class="card-badge-tl" style="background:rgba(255,255,255,.15);color:#fff;z-index:2">Wix Template</div>
-        <svg viewBox="0 0 400 190" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
-          <rect width="400" height="190" fill="#0f1929"/>
-          <rect width="400" height="22" fill="#0a1020"/>
-          <circle cx="12" cy="11" r="4" fill="#fc5c57"/><circle cx="24" cy="11" r="4" fill="#fdbc40"/><circle cx="36" cy="11" r="4" fill="#33c748"/>
-          <rect x="50" y="5" width="300" height="12" rx="6" fill="#1a2540"/>
-          <rect y="22" width="400" height="55" fill="#0d1f3c"/>
-          <text x="200" y="44" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold" font-family="Arial">Consultores &amp; Asociados</text>
-          <text x="200" y="58" text-anchor="middle" fill="#90b0d8" font-size="7" font-family="Arial">Estrategia · Finanzas · Operaciones · Legal</text>
-          <rect x="140" y="62" width="120" height="11" rx="5" fill="#4a2c8a"/>
-          <text x="200" y="71" text-anchor="middle" fill="#fff" font-size="6.5" font-family="Arial">Agenda una Consulta</text>
-          <rect y="79" width="400" height="50" fill="#111d30"/>
-          <text x="200" y="92" text-anchor="middle" fill="#fff" font-size="8" font-weight="bold" font-family="Arial">Nuestros Servicios</text>
-          <rect x="15" y="97" width="85" height="26" rx="4" fill="#1a2d4a"/>
-          <text x="57" y="107" text-anchor="middle" fill="#90b0d8" font-size="8" font-family="Arial">📊</text>
-          <text x="57" y="118" text-anchor="middle" fill="#ccc" font-size="6" font-family="Arial">Consultoría</text>
-          <rect x="115" y="97" width="85" height="26" rx="4" fill="#1a2d4a"/>
-          <text x="157" y="107" text-anchor="middle" fill="#90b0d8" font-size="8" font-family="Arial">💰</text>
-          <text x="157" y="118" text-anchor="middle" fill="#ccc" font-size="6" font-family="Arial">Finanzas</text>
-          <rect x="215" y="97" width="85" height="26" rx="4" fill="#1a2d4a"/>
-          <text x="257" y="107" text-anchor="middle" fill="#90b0d8" font-size="8" font-family="Arial">⚙️</text>
-          <text x="257" y="118" text-anchor="middle" fill="#ccc" font-size="6" font-family="Arial">Operaciones</text>
-          <rect x="315" y="97" width="70" height="26" rx="4" fill="#1a2d4a"/>
-          <text x="350" y="107" text-anchor="middle" fill="#90b0d8" font-size="8" font-family="Arial">📋</text>
-          <text x="350" y="118" text-anchor="middle" fill="#ccc" font-size="6" font-family="Arial">Legal</text>
-          <rect y="131" width="400" height="32" fill="#0d1f3c"/>
-          <text x="200" y="143" text-anchor="middle" fill="#90b0d8" font-size="7" font-weight="bold" font-family="Arial">Casos de Éxito</text>
-          <rect x="20" y="148" width="105" height="10" rx="3" fill="#1a2d4a"/>
-          <rect x="145" y="148" width="105" height="10" rx="3" fill="#1a2d4a"/>
-          <rect x="270" y="148" width="110" height="10" rx="3" fill="#1a2d4a"/>
-          <rect y="165" width="400" height="25" fill="#4a2c8a"/>
-          <text x="200" y="180" text-anchor="middle" fill="#fff" font-size="7" font-weight="bold" font-family="Arial">+150 empresas han crecido con nosotros</text>
-        </svg>
+        <div class="card-badge-tl" style="background:rgba(255,255,255,.15);color:#fff;z-index:2;font-weight:800">Wix Template</div>
+        
+        <iframe class="iframe-thumb" src="https://www.wix.com/website-template/view/html/1757" loading="lazy" sandbox="allow-scripts allow-same-origin" title="Preview"></iframe>
+        <div class="iframe-overlay"></div>
       </div>
       <div class="card-body">
         <div class="card-name">Business Consulting (Corporate)</div>
@@ -798,6 +554,7 @@ body{font-family:'Inter',sans-serif;background:#fff;color:#111;-webkit-print-col
       <div class="cta-row"><div class="cta-dot"></div><div class="cta-info"><span>WhatsApp</span><a href="https://wa.me/525561240257">+52 55 6124 0257</a></div></div>
       <div class="cta-row"><div class="cta-dot"></div><div class="cta-info"><span>Email</span><a href="mailto:janet.martinez@agencysmart.mx">janet.martinez@agencysmart.mx</a></div></div>
       <div class="cta-row"><div class="cta-dot"></div><div class="cta-info"><span>Instagram</span><a href="https://instagram.com/agencysmart_mx">@agencysmart_mx</a></div></div>
+      <div class="cta-row"><div class="cta-dot"></div><div class="cta-info"><span>Facebook</span><a href="https://www.facebook.com/share/1E5oFFesoT/?mibextid=wwXIfr">Agency Smart</a></div></div>
       <div class="cta-row"><div class="cta-dot"></div><div class="cta-info"><span>Sitio web</span><a href="https://www.agencysmart.mx">agencysmart.mx</a></div></div>
     </div>
   </div>
